@@ -9,6 +9,8 @@ abstract class ThemeColors {
   static const Color cardLight = Color(0xFFFFFFFF);
   static const Color primaryTextLight = Color(0xFF333333);
   static const Color secondaryTextLight = Color(0xFF666666);
+  static const Color appBarTextColor = Color(0xFF477B72);
+  static const Color categoryBackroudColor = Color(0xFFC6D6D3);
 
   // Dark Theme Colors
   static const Color scaffoldBackgroundDark = Color(0xFF0D0F21);

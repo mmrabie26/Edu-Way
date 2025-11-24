@@ -8,14 +8,24 @@ ThemeData lightTheme() => ThemeData(
       scaffoldBackgroundColor: ThemeColors.backgroundLight,
       colorScheme: const ColorScheme.light(
         brightness: Brightness.light,
-        primary: ThemeColors.primary,
+        primary: ThemeColors.appBarTextColor,
         secondary: ThemeColors.primary,
         surface: ThemeColors.cardLight,
         error: ThemeColors.error,
-        onPrimary: ThemeColors.black,
+        onPrimary: ThemeColors.white,
         onSecondary: ThemeColors.black,
         onSurface: ThemeColors.primaryTextLight,
         onError: ThemeColors.white,
+      ),
+
+      appBarTheme: const AppBarTheme(
+        elevation: 0,
+        backgroundColor: ThemeColors.backgroundLight,
+        titleTextStyle: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
       ),
       
       inputDecorationTheme: InputDecorationTheme(

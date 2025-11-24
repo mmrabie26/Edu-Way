@@ -8,8 +8,8 @@ ThemeData lightTheme() => ThemeData(
       scaffoldBackgroundColor: ThemeColors.backgroundLight,
       colorScheme: const ColorScheme.light(
         brightness: Brightness.light,
-        primary: ThemeColors.appBarTextColor,
-        secondary: ThemeColors.primary,
+        primary: ThemeColors.primary,
+        secondary: ThemeColors.secondary,
         surface: ThemeColors.cardLight,
         error: ThemeColors.error,
         onPrimary: ThemeColors.white,
@@ -21,6 +21,9 @@ ThemeData lightTheme() => ThemeData(
       appBarTheme: const AppBarTheme(
         elevation: 0,
         backgroundColor: ThemeColors.backgroundLight,
+        iconTheme: IconThemeData(
+          color: ThemeColors.primary,
+        ),
         titleTextStyle: TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.bold,
@@ -36,7 +39,7 @@ ThemeData lightTheme() => ThemeData(
           borderSide: const BorderSide(color: Colors.grey),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: ThemeColors.primary, width: 1),
+          borderSide: const BorderSide(color: ThemeColors.secondary, width: 1),
         ),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: ThemeColors.error, width: 1),

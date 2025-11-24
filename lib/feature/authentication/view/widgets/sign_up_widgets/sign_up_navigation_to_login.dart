@@ -16,7 +16,7 @@ class SignUpNavigationToLogin extends StatelessWidget {
                       },
                       child: const Text(
                         "Login Here",
-                        style: TextStyle(color: ThemeColors.primary),
+                        style: TextStyle(color: ThemeColors.secondary),
                       ),
                     ),
                   ],

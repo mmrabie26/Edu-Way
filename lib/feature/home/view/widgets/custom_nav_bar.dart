@@ -10,7 +10,7 @@ class CustomNavBar extends StatelessWidget {
     return SalomonBottomBar(
         currentIndex: 1,
         onTap: (i) => {},
-        selectedItemColor: ThemeColors.appBarTextColor,
+        selectedItemColor: ThemeColors.primary,
         items: [
           SalomonBottomBarItem(
             icon: Icon(Icons.home),

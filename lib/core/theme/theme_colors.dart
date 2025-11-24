@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
 abstract class ThemeColors {
-  // Main green color from the website
-  static const Color primary = Color(0xFFF8C657);
-
+  
   // Light Theme Colors
+    static const Color primary = Color(0xFF477B72);
+  static const Color secondary = Color(0xFFF8C657);
   static const Color backgroundLight = Color(0xFFE0E0E0);
   static const Color cardLight = Color(0xFFFFFFFF);
   static const Color primaryTextLight = Color(0xFF333333);
   static const Color secondaryTextLight = Color(0xFF666666);
-  static const Color appBarTextColor = Color(0xFF477B72);
   static const Color categoryBackroudColor = Color(0xFFC6D6D3);
 
   // Dark Theme Colors

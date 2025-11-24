@@ -22,7 +22,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
-              color: ThemeColors.appBarTextColor,
+              color: ThemeColors.primary,
             ),
           ),
         ],

@@ -31,7 +31,7 @@ class HomeItemCard extends StatelessWidget {
                   placeholder: (context, url) =>
                       Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) =>
-                      const ColoredBox(color: ThemeColors.appBarTextColor),
+                      const ColoredBox(color: ThemeColors.primary),
                 ),
               ),
             ),
@@ -53,7 +53,7 @@ class HomeItemCard extends StatelessWidget {
                   itemCount: 5,
                   itemSize: 14,
                   itemBuilder: (BuildContext context, int index) =>
-                      Icon(Icons.star, color: ThemeColors.appBarTextColor),
+                      Icon(Icons.star, color: ThemeColors.primary),
                 ),
               ],
             ),
@@ -84,7 +84,7 @@ class HomeItemCard extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: ThemeColors.appBarTextColor,
+                color: ThemeColors.primary,
               ),
             ),
           ],

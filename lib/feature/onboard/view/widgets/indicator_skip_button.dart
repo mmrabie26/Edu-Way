@@ -19,7 +19,7 @@ class IndicatorSkipButton extends StatelessWidget {
                         width: 12,
                         height: 2,
                         decoration: BoxDecoration(
-                          color: currentPage==index?ThemeColors.primary:Colors.black,
+                          color: currentPage==index?ThemeColors.secondary:Colors.black,
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),

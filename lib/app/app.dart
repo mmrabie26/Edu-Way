@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           title: AppString.appName,
           debugShowCheckedModeBanner: false,
           theme: lightTheme(),
-          home: CategoryView(),
+          home: HomeView(),
         );
   }
 }

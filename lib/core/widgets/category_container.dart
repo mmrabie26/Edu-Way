@@ -8,13 +8,15 @@ class CategoryContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: ThemeColors.categoryBackroudColor,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Text(title, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 15)),
+      child: Padding(
+              padding: const EdgeInsets.all(10),
+        child: Text(title, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 15)),
+      ),
     );
   }
 }

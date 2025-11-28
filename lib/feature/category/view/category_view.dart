@@ -1,4 +1,4 @@
-import 'package:eduway/feature/category/view/category_app_bar.dart';
+import 'package:eduway/core/widgets/defualt_app_bar.dart';
 import 'package:eduway/feature/category/view/category_body.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class CategoryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CategoryAppBar(title: "Categories", onTap: (){}),
+      appBar: DefualtAppBar(title: "Categories", onTap: (){}),
       body: CategoryBody(),
     );
   }

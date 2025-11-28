@@ -3,10 +3,10 @@ import 'package:eduway/core/constants/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CategoryAppBar extends StatelessWidget implements PreferredSizeWidget{
+class DefualtAppBar extends StatelessWidget implements PreferredSizeWidget{
     final String title;
     final VoidCallback? onTap;
-  const CategoryAppBar({required this.title, required this.onTap, super.key});
+  const DefualtAppBar({required this.title, required this.onTap, super.key});
 
   @override
   Widget build(BuildContext context) {

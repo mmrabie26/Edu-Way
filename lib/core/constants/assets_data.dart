@@ -7,6 +7,8 @@ abstract class AssetsData {
   static String appLogo = "${iconSvg}appLogo.svg";
   static String person = "${iconSvg}man.svg";
   static String categoryArrow = "${iconSvg}categoryArrow.svg";
+  static String seen = "${iconSvg}seen.svg";
+  static String puss = "${iconSvg}puss.svg";
 
   // bottom nav bar icons
   static String home = "${iconSvg}home.svg";

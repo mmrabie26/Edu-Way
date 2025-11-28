@@ -1,5 +1,5 @@
 import 'package:eduway/feature/home/view/widgets/header_with_see_all.dart';
-import 'package:eduway/feature/home/view/widgets/category_container.dart';
+import 'package:eduway/core/widgets/category_container.dart';
 import 'package:flutter/material.dart';
 
 class HomeCategory extends StatelessWidget {

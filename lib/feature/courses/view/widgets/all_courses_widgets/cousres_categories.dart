@@ -7,11 +7,11 @@ class CousresCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: const [
+      children: [
         CategoryContainer(title: "All"),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         CategoryContainer(title: "Downloads"),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         CategoryContainer(title: "Archived"),
       ],
     );

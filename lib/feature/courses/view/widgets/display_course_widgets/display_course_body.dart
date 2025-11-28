@@ -1,3 +1,4 @@
+import 'package:eduway/feature/courses/view/widgets/display_course_widgets/course_categories.dart';
 import 'package:eduway/feature/courses/view/widgets/display_course_widgets/cousrse_leatures_list.dart';
 import 'package:eduway/feature/courses/view/widgets/display_course_widgets/leature_details.dart';
 import 'package:eduway/feature/courses/view/widgets/display_course_widgets/video_player.dart';
@@ -14,6 +15,7 @@ class DisplayCourseBody extends StatelessWidget {
         children: 
         [
           VideoPlayer(),
+          CourseCategories(),
           LeatureDetails(
             title: "Flutter Development Course",
             instructor: "John Doe",

@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 
 class CategoryContainer extends StatelessWidget {
   final String title;
-  const CategoryContainer({required this.title, super.key});
+  Color? color;
+  CategoryContainer({required this.title, this.color, super.key});
 
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: ThemeColors.categoryBackroudColor,
+        color: color?? ThemeColors.categoryBackroudColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(

@@ -9,6 +9,7 @@ abstract class AssetsData {
   static String categoryArrow = "${iconSvg}categoryArrow.svg";
   static String seen = "${iconSvg}seen.svg";
   static String puss = "${iconSvg}puss.svg";
+  static String cardArrow = "${iconSvg}card_arrow.svg";
 
   // bottom nav bar icons
   static String home = "${iconSvg}home.svg";

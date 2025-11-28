@@ -6,7 +6,8 @@ import 'package:flutter_svg/svg.dart';
 class DefualtAppBar extends StatelessWidget implements PreferredSizeWidget{
     final String title;
     final VoidCallback? onTap;
-  const DefualtAppBar({required this.title, required this.onTap, super.key});
+    bool leadingWidgets=true;
+    DefualtAppBar({required this.title,  this.onTap,leadingWidgets, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class DefualtAppBar extends StatelessWidget implements PreferredSizeWidget{
 
     return AppBar(
       title: Text(title),
-      actions: 
+      actions: !leadingWidgets?[]:
       [
          Padding(
           padding: const EdgeInsets.only(right: Spacing.s12),

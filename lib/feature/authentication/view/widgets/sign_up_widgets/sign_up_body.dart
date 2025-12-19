@@ -1,51 +1,45 @@
+import 'package:eduway/app/app_router.dart';
+import 'package:eduway/core/constants/enums.dart';
 import 'package:eduway/core/constants/spacing.dart';
-import 'package:eduway/core/widgets/default_button.dart';
-import 'package:eduway/core/widgets/default_textfromfield.dart';
+import 'package:eduway/core/widgets/snack_bar_message.dart';
 import 'package:eduway/feature/authentication/view/widgets/auth_title.dart';
-import 'package:eduway/feature/authentication/view/widgets/facebook_google_button.dart';
-import 'package:eduway/feature/authentication/view/widgets/or_spalt_widget.dart';
-import 'package:eduway/feature/authentication/view/widgets/sign_up_widgets/sign_up_navigation_to_login.dart';
+import 'package:eduway/feature/authentication/view/widgets/sign_up_widgets/sign_up_buttons.dart';
+import 'package:eduway/feature/authentication/view/widgets/sign_up_widgets/sign_up_text_field.dart';
+import 'package:eduway/feature/authentication/view_model/signup/sign_up_cubit.dart';
+import 'package:eduway/feature/authentication/view_model/signup/sign_up_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpBody extends StatelessWidget {
   const SignUpBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+    return BlocListener<SignUpCubit, SignUpState>(
+      listener: (context, state) {
+        if (state.requestStatus == RequestStatus.failure) {
+          SnackBarMessage.showError(context, state.errorMessage);
+        }
+
+        if (state.requestStatus == RequestStatus.loaded) {
+          SnackBarMessage.showSuccess(
+              context, "Check your email to verify account.");
+              context.goNamed(AppRouter.verifyOtp,pathParameters: {'email':state.email});
+        }
+      },
+      child: const SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const AuthTitle(),
-                const SizedBox(height: Spacing.s16),
-                DefaultTextfromfield(lable: const Text("Full Name")),
-                const SizedBox(height: Spacing.s12),
-                DefaultTextfromfield(lable: const Text("Email")),
-                const SizedBox(height: Spacing.s12),
-                DefaultTextfromfield(
-                  lable: const Text("Password"),
-                  passwordHide: true,
-                  suffixIcon: const Icon(Icons.remove_red_eye_outlined),
-                ),
-                const SizedBox(height: Spacing.s12),
-                DefaultTextfromfield(
-                  lable: const Text("Confirm Password"),
-                  passwordHide: true,
-                  suffixIcon: const Icon(Icons.remove_red_eye_outlined),
-                ),
-                const SizedBox(height: Spacing.s12),
-                DefaultButton(child: const Text("Sign In"), onPressed: () {}),
-                const SizedBox(height: Spacing.s12),
-                const OrSpaltWidget(),
-                const SizedBox(height: Spacing.s12),
-                FacebookGoogleButton(),
-                const SizedBox(height: Spacing.s12),
-                SignUpNavigationToLogin(),
-                const SizedBox(height: Spacing.s12),
-
+                AuthTitle(),
+                SizedBox(height: Spacing.s16),
+                SignUpTextField(),
+                SizedBox(height: Spacing.s12),
+                SignUpButtons(),
+                SizedBox(height: Spacing.s12),
               ],
             ),
           ),

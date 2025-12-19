@@ -12,7 +12,7 @@ class AuthTitle extends StatelessWidget {
         top: MediaQuery.of(context).size.height * 0.12,
         bottom: MediaQuery.of(context).size.height * 0.03,
       ),
-      child: SvgPicture.asset(AssetsData.appLogo),
+      child: RepaintBoundary(child: SvgPicture.asset(AssetsData.appLogo)),
     );
   }
 }

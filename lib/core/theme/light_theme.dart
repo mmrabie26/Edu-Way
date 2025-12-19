@@ -51,7 +51,7 @@ ThemeData lightTheme() => ThemeData(
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          minimumSize: const Size(double.infinity, 40),
+          minimumSize: const Size(double.infinity, 30),
           padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 10),
           shape: RoundedRectangleBorder(
            borderRadius: BorderRadius.circular(15),

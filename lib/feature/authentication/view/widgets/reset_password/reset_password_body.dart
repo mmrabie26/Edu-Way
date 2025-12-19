@@ -1,6 +1,5 @@
 import 'package:eduway/core/constants/spacing.dart';
 import 'package:eduway/core/widgets/default_button.dart';
-import 'package:eduway/core/widgets/default_textfromfield.dart';
 import 'package:eduway/feature/authentication/view/widgets/auth_title.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,7 @@ class ResetPasswordBody extends StatelessWidget {
             children: [
               const AuthTitle(),
               const SizedBox(height: Spacing.s16),
-              DefaultTextfromfield(lable: Text("email")),
+              // DefaultTextfromfield(lable: Text("email")),
               const SizedBox(height: Spacing.s16),
               DefaultButton(child: Text("Submit"),onPressed: (){},),
           

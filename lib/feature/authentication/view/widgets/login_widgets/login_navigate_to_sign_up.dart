@@ -1,9 +1,11 @@
+import 'package:eduway/app/app_router.dart';
 import 'package:eduway/core/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginNavigateToSignUp extends StatelessWidget {
-   Function? onPressed;
-   LoginNavigateToSignUp({super.key,this.onPressed});
+   final Function? onPressed;
+   const LoginNavigateToSignUp({super.key,this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +14,7 @@ class LoginNavigateToSignUp extends StatelessWidget {
                   children: [
                     const Text("Don’t have an account? "),
                     TextButton(
-                      onPressed: () {
-                        
-                      },
+                      onPressed: () => context.goNamed(AppRouter.signUp),
                       child: const Text(
                         "Sign Up Here",
                         style: TextStyle(color: ThemeColors.secondary),

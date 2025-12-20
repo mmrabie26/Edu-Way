@@ -3,6 +3,7 @@ import 'package:eduway/feature/authentication/view/sign_up_view.dart';
 import 'package:eduway/feature/authentication/view/verify_otp_view.dart';
 import 'package:eduway/feature/home/view/home_view.dart';
 import 'package:go_router/go_router.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class AppRouter {
   static const _login = '/login';
@@ -25,7 +26,13 @@ class AppRouter {
       GoRoute(
         path: _login,
         name: login,
-        builder: (context, state) => LoginView(),
+        builder: (context, state) {
+          final Session? session=Supabase.instance.client.auth.currentSession;
+          if(session!=null){
+            Future.microtask(() => GoRouter.of(context).go('/home'));
+          }
+          return LoginView();
+        },
       ),
       GoRoute(
         path: _signUp,

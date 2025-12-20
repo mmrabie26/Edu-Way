@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:eduway/core/error/app_exception.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:eduway/generated/l10n.dart';
 
 class ExceptionHandler {
   static Exception handle(dynamic error) {
@@ -14,24 +15,24 @@ class ExceptionHandler {
       switch (code) {
         case 400:
         case 401:
-          return UnauthorizedException('Invalid data.');
+          return UnauthorizedException(S.current.error_invalidData);
         case 403:
-          return UnauthorizedException('You do not have permission to access this resource.');
+          return UnauthorizedException(S.current.error_noPermission);
         case 404:
-          return UnauthorizedException('Account not found.');
+          return UnauthorizedException(S.current.error_accountNotFound);
         case 409:
-          return ValidationException('This email is already registered. Please sign in instead.');
+          return ValidationException(S.current.error_emailAlreadyRegistered);
         case 422:
-          return ValidationException('Email or password format is not valid.');
+          return ValidationException(S.current.error_invalidEmailPasswordFormat);
         case 429:
-          return ServerException('Too many attempts. Please try again later.');
+          return ServerException(S.current.error_tooManyAttempts);
         default:
           if (code >= 500) {
-            return ServerException('Server error. Please try again later.');
+            return ServerException(S.current.error_server);
           } else if (code >= 400 && code < 500) {
             return ServerException(rawMessage);
           } else {
-            return const UnexpectedException();
+            return UnexpectedException();
           }
       }
     }
@@ -45,13 +46,13 @@ class ExceptionHandler {
     if (error is ServerException) return error;
 
     if (error is SocketException) {
-      return const NetworkException("No internet connection");
+      return NetworkException(S.current.error_noInternet);
     }
 
     if (error is TimeoutException) {
-      return const NetworkException("Connection timed out");
+      return NetworkException(S.current.error_connectionTimedOut);
     }
 
-    return const UnexpectedException();
+    return UnexpectedException();
   }
 }

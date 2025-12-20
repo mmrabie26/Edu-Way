@@ -4,6 +4,7 @@ import 'package:eduway/core/widgets/default_textfromfield.dart';
 import 'package:eduway/feature/authentication/view_model/signup/sign_up_cubit.dart';
 import 'package:eduway/feature/authentication/view_model/signup/sign_up_state.dart';
 import 'package:flutter/material.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
 
@@ -21,10 +22,10 @@ class SignUpTextField extends StatelessWidget {
             final String fullName = state.item1;
             final bool fullNameValid = state.item2;
             return DefaultTextfromfield(
-              lable: const Text("Full Name"),
+              lable: Text(S.of(context).auth_fullName),
               onChanged: (String fullName) => cubit.changeFullName(fullName),
               errorText: fullName.isNotEmpty && !fullNameValid
-                  ? 'full name unvalid'
+                  ? S.of(context).auth_fullNameInvalid
                   : null,
             );
           },
@@ -37,10 +38,10 @@ class SignUpTextField extends StatelessWidget {
             final String email = state.item1;
             final bool emailValid = state.item2;
             return DefaultTextfromfield(
-              lable: const Text("Email"),
+              lable: Text(S.of(context).auth_email),
               onChanged: (String email) => cubit.changeEmail(email),
               errorText: email.isNotEmpty && !emailValid
-                  ? 'Invalid email'
+                  ? S.of(context).auth_invalidEmail
                   : null,
             );
           },
@@ -55,7 +56,7 @@ class SignUpTextField extends StatelessWidget {
             final bool passwordValid = state.item2;
             final bool passwordHide = state.item3;
             return DefaultTextfromfield(
-              lable: const Text("Password"),
+              lable: Text(S.of(context).auth_password),
               passwordHide: passwordHide,
               suffixIcon: IconButton(
                 onPressed: () => cubit.changePasswordVisibility(),
@@ -66,7 +67,7 @@ class SignUpTextField extends StatelessWidget {
               ),
               onChanged: (String password) => cubit.changePassword(password),
               errorText: password.isNotEmpty && !passwordValid
-                  ? 'Invalid password'
+                  ? S.of(context).auth_invalidPassword
                   : null,
             );
           },
@@ -84,7 +85,7 @@ class SignUpTextField extends StatelessWidget {
             final bool confirmPasswordValid = state.item2;
             final bool confirmPasswordHide = state.item3;
             return DefaultTextfromfield(
-              lable: const Text("Confirm Password"),
+              lable: Text(S.of(context).auth_confirmPassword),
               passwordHide: confirmPasswordHide,
               suffixIcon: IconButton(
                 onPressed: () => cubit.changeConfirmPasswordVisibility(),
@@ -98,7 +99,7 @@ class SignUpTextField extends StatelessWidget {
               onChanged: (String confirmPassword) =>
                   cubit.changeConfirmPassword(confirmPassword),
               errorText: confirmPassword.isNotEmpty && !confirmPasswordValid
-                  ? 'confirm password unvalid'
+                  ? S.of(context).auth_confirmPasswordInvalid
                   : null,
             );
           },

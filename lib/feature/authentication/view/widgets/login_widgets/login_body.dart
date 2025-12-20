@@ -9,6 +9,7 @@ import 'package:eduway/feature/authentication/view/widgets/auth_title.dart';
 import 'package:eduway/feature/authentication/view_model/login/login_cubit.dart';
 import 'package:eduway/feature/authentication/view_model/login/login_state.dart';
 import 'package:flutter/material.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -23,7 +24,7 @@ class LoginBody extends StatelessWidget {
           SnackBarMessage.showError(context, state.errorMessage);
         }
         if (state.loginStatus == RequestStatus.loaded) {
-          SnackBarMessage.showSuccess(context, "Login Successful");
+          SnackBarMessage.showSuccess(context, S.of(context).auth_loginSuccessful);
           context.goNamed(AppRouter.home);
         }
       },

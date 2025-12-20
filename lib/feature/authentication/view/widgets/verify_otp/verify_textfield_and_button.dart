@@ -6,6 +6,7 @@ import 'package:eduway/feature/authentication/view_model/verify_otp/verify_otp_s
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:tuple/tuple.dart';
 
 class VerifyTextfieldAndButton extends StatelessWidget {
@@ -64,7 +65,7 @@ class VerifyTextfieldAndButton extends StatelessWidget {
                     ? RepaintBoundary(
                         child: const Center(child: CircularProgressIndicator()),
                       )
-                    : const Text("verify"),
+                    : Text(S.of(context).auth_verify),
               );
             },
           ),

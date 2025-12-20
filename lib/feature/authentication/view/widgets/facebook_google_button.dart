@@ -2,6 +2,7 @@ import 'package:eduway/core/constants/assets_data.dart';
 import 'package:eduway/core/widgets/default_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:eduway/generated/l10n.dart';
 
 class FacebookGoogleButton extends StatelessWidget {
   const FacebookGoogleButton({super.key});
@@ -21,7 +22,7 @@ class FacebookGoogleButton extends StatelessWidget {
             ),
             icon: Icon(Icons.facebook, size: 25),
             label: Text(
-              "Sign in with facebook",
+              S.of(context).auth_signInWithFacebook,
               overflow: TextOverflow.ellipsis,
             ),
           ),

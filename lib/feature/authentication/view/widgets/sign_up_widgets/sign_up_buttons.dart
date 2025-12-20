@@ -7,6 +7,7 @@ import 'package:eduway/feature/authentication/view/widgets/sign_up_widgets/sign_
 import 'package:eduway/feature/authentication/view_model/signup/sign_up_cubit.dart';
 import 'package:eduway/feature/authentication/view_model/signup/sign_up_state.dart';
 import 'package:flutter/material.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
 
@@ -37,7 +38,7 @@ class SignUpButtons extends StatelessWidget {
                         child: RepaintBoundary(child: CircularProgressIndicator(color: Colors.white)),
                       ),
                     )
-                  : const SizedBox(height: 25, child: Text("Sign Up")),
+                  : SizedBox(height: 25, child: Text(S.of(context).auth_signUp)),
             );
           },
         ),

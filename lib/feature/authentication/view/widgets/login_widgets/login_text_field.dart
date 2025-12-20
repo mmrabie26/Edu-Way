@@ -3,6 +3,7 @@ import 'package:eduway/core/theme/theme_colors.dart';
 import 'package:eduway/core/widgets/default_textfromfield.dart';
 import 'package:eduway/feature/authentication/view_model/login/login_cubit.dart';
 import 'package:eduway/feature/authentication/view_model/login/login_state.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
@@ -21,7 +22,7 @@ class LoginTextField extends StatelessWidget {
             final bool emailValid = state.item1;
             final String email = state.item2;
             return DefaultTextfromfield(
-              lable: const Text("Email"),
+              lable: Text(S.of(context).auth_email),
               onChanged: (email) => cubit.changeEmail(email),
               textInputType: TextInputType.emailAddress,
               errorText: email.isNotEmpty && !emailValid
@@ -43,10 +44,10 @@ class LoginTextField extends StatelessWidget {
             final String password = state.item2;
             final bool passwordVisibility = state.item3;
             return DefaultTextfromfield(
-              lable: const Text("password"),
+              lable: Text(S.of(context).auth_password),
               onChanged: (password) => cubit.changePassword(password),
               errorText: password.isNotEmpty && !passwordValid
-                  ? 'password unvalid'
+                  ? S.of(context).auth_invalidPassword
                   : null,
               passwordHide: passwordVisibility,
               suffixIcon: IconButton(

@@ -8,6 +8,7 @@ import 'package:eduway/feature/authentication/view_model/verify_otp/verify_otp_c
 import 'package:eduway/feature/authentication/view_model/verify_otp/verify_otp_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:go_router/go_router.dart';
 
 class VerifyOtpBody extends StatelessWidget {
@@ -18,11 +19,11 @@ class VerifyOtpBody extends StatelessWidget {
     return BlocListener<VerifyOtpCubit,VerifyOtpState>(
       listener: (context, state) {
         if(state.requestStatus==RequestStatus.loaded){
-          SnackBarMessage.showSuccess(context, "Verification Successful");
+          SnackBarMessage.showSuccess(context, S.of(context).auth_verificationSuccessful);
           context.goNamed(AppRouter.login);
         }
         if(state.requestStatus==RequestStatus.failure){
-          SnackBarMessage.showError(context,"Something went wrong");
+          SnackBarMessage.showError(context,S.of(context).auth_somethingWentWrong);
         }
       },
       child: const SafeArea(

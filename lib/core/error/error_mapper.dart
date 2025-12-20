@@ -1,5 +1,6 @@
 import 'package:eduway/core/error/app_exception.dart';
 import 'package:eduway/core/error/failure.dart';
+import 'package:eduway/generated/l10n.dart';
 
 class ErrorMapper {
   static Failure map(Exception error) {
@@ -24,6 +25,6 @@ class ErrorMapper {
     }
 
     // احتياط لأي Exception غير متوقع
-    return const UnexpectedFailure("Unexpected error");
+    return UnexpectedFailure(S.current.error_unexpected);
   }
 }

@@ -9,6 +9,7 @@ import 'package:eduway/feature/authentication/view_model/signup/sign_up_cubit.da
 import 'package:eduway/feature/authentication/view_model/signup/sign_up_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:go_router/go_router.dart';
 
 class SignUpBody extends StatelessWidget {
@@ -24,7 +25,7 @@ class SignUpBody extends StatelessWidget {
 
         if (state.requestStatus == RequestStatus.loaded) {
           SnackBarMessage.showSuccess(
-              context, "Check your email to verify account.");
+              context, S.of(context).auth_checkYourEmailToVerifyAccount);
               context.goNamed(AppRouter.verifyOtp,pathParameters: {'email':state.email});
         }
       },

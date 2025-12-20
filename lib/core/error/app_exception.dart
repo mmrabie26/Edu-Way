@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:eduway/generated/l10n.dart';
 
 abstract class AppException extends Equatable implements Exception {
   final String message;
@@ -29,5 +30,5 @@ class ServerException extends AppException {
 
 // Fallback
 class UnexpectedException extends AppException {
-  const UnexpectedException() : super("An unexpected error occurred. Please try again.");
+  UnexpectedException() : super(S.current.error_unexpected);
 }

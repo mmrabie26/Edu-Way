@@ -1,6 +1,7 @@
 import 'package:eduway/core/constants/spacing.dart';
 import 'package:eduway/core/widgets/default_button.dart';
 import 'package:eduway/feature/authentication/view/widgets/auth_title.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class OtpBody extends StatelessWidget {
@@ -18,7 +19,7 @@ class OtpBody extends StatelessWidget {
               const SizedBox(height: Spacing.s16),
               // DefaultTextfromfield(lable: Text("Otp Code"),textInputType: TextInputType.number,),
               const SizedBox(height: Spacing.s16),
-              DefaultButton(child: Text("Submit"), onPressed: () {}),
+              DefaultButton(child: Text(S.of(context).auth_submit), onPressed: () {}),
             ],
           ),
         ),

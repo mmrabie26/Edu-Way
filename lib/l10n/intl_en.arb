@@ -1,0 +1,167 @@
+{
+  "@@locale": "en",
+
+  "auth_fullName": "Full Name",
+  "@auth_fullName": {
+    "description": "Label for full name field"
+  },
+
+  "auth_email": "Email",
+  "@auth_email": {
+    "description": "Label for email field"
+  },
+
+  "auth_password": "Password",
+  "@auth_password": {
+    "description": "Label for password field"
+  },
+
+  "auth_confirmPassword": "Confirm Password",
+  "@auth_confirmPassword": {
+    "description": "Label for confirm password field"
+  },
+
+  "auth_signUp": "Sign Up",
+  "@auth_signUp": {
+    "description": "Sign up button text"
+  },
+
+  "auth_signIn": "Sign In",
+  "@auth_signIn": {
+    "description": "Sign in button text"
+  },
+
+  "auth_signInWithFacebook": "Sign in with Facebook",
+  "@auth_signInWithFacebook": {
+    "description": "Label for sign in with Facebook button"
+  },
+
+  "auth_or": "or",
+  "@auth_or": {
+    "description": "Text shown between social buttons and form"
+  },
+
+  "auth_dontHaveAccount": "Don't have an account?",
+  "@auth_dontHaveAccount": {
+    "description": "Prompt asking the user to create an account"
+  },
+
+  "auth_alreadyHaveAccount": "Already have an account?",
+  "@auth_alreadyHaveAccount": {
+    "description": "Prompt asking the user to sign in instead"
+  },
+
+  "auth_submit": "Submit",
+  "@auth_submit": {
+    "description": "Generic submit button text"
+  },
+
+  "auth_otpCode": "OTP Code",
+  "@auth_otpCode": {
+    "description": "Label for OTP code field"
+  },
+
+  "auth_verify": "Verify",
+  "@auth_verify": {
+    "description": "Button text to verify OTP"
+  },
+
+  "auth_didntReceiveCode": "Didn't receive code",
+  "@auth_didntReceiveCode": {
+    "description": "Text shown when user didn't receive the verification code"
+  },
+
+  "auth_resend": "Resend",
+  "@auth_resend": {
+    "description": "Button label to resend verification code"
+  },
+
+  "auth_enterYourEmailWeSentTo": "Enter your email address we sent to {email}",
+  "@auth_enterYourEmailWeSentTo": {
+    "description": "Instruction telling the user which email address received the verification email",
+    "placeholders": {
+      "email": {}
+    }
+  },
+
+  "auth_verificationSuccessful": "Verification Successful",
+  "@auth_verificationSuccessful": {
+    "description": "Message shown when verification succeeds"
+  },
+
+  "auth_somethingWentWrong": "Something went wrong",
+  "@auth_somethingWentWrong": {
+    "description": "Generic error message"
+  },
+
+  "auth_loginSuccessful": "Login Successful",
+  "@auth_loginSuccessful": {
+    "description": "Message shown when login succeeds"
+  },
+
+  "auth_checkYourEmailToVerifyAccount": "Check your email to verify account.",
+  "@auth_checkYourEmailToVerifyAccount": {
+    "description": "Message shown after successful signup"
+  },
+
+  "auth_invalidEmail": "Invalid email",
+  "@auth_invalidEmail": {
+    "description": "Validation message when email is invalid"
+  },
+
+  "auth_invalidPassword": "Invalid password",
+  "@auth_invalidPassword": {
+    "description": "Validation message when password is invalid"
+  },
+
+  "auth_timeRemaining": "- 0:{time}",
+  "@auth_timeRemaining": {
+    "description": "Countdown timer text before resend",
+    "placeholders": {"time": {}}
+  },
+
+  "auth_fullNameInvalid": "Full name is invalid",
+  "@auth_fullNameInvalid": {
+    "description": "Validation message when full name is invalid"
+  },
+
+  "auth_confirmPasswordInvalid": "Confirm password is invalid",
+  "@auth_confirmPasswordInvalid": {
+    "description": "Validation message when confirm password is invalid"
+  },
+
+  "auth_weJustSentAnEmail": "We just sent an email",
+  "@auth_weJustSentAnEmail": {
+    "description": "Title for email-sent verification screen"
+  },
+
+  "error_invalidData": "Invalid data.",
+  "@error_invalidData": { "description": "Generic invalid data message" },
+
+  "error_noPermission": "You do not have permission to access this resource.",
+  "@error_noPermission": { "description": "Permission denied message" },
+
+  "error_accountNotFound": "Account not found.",
+  "@error_accountNotFound": { "description": "Account not found message" },
+
+  "error_emailAlreadyRegistered": "This email is already registered. Please sign in instead.",
+  "@error_emailAlreadyRegistered": { "description": "Used when signup email already exists" },
+
+  "error_invalidEmailPasswordFormat": "Email or password format is not valid.",
+  "@error_invalidEmailPasswordFormat": { "description": "Invalid format for email or password" },
+
+  "error_tooManyAttempts": "Too many attempts. Please try again later.",
+  "@error_tooManyAttempts": { "description": "Rate limit message" },
+
+  "error_server": "Server error. Please try again later.",
+  "@error_server": { "description": "Generic server error message" },
+
+  "error_noInternet": "No internet connection",
+  "@error_noInternet": { "description": "Network connectivity message" },
+
+  "error_connectionTimedOut": "Connection timed out",
+  "@error_connectionTimedOut": { "description": "Timeout message" },
+
+  "error_unexpected": "An unexpected error occurred. Please try again.",
+  "@error_unexpected": { "description": "Fallback unexpected error message" }
+}

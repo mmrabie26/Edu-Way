@@ -6,6 +6,7 @@ import 'package:eduway/feature/authentication/view/widgets/or_spalt_widget.dart'
 import 'package:eduway/feature/authentication/view_model/login/login_cubit.dart';
 import 'package:eduway/feature/authentication/view_model/login/login_state.dart';
 import 'package:flutter/material.dart';
+import 'package:eduway/generated/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
 
@@ -38,7 +39,7 @@ class LoginButtons extends StatelessWidget {
                         ),
                       ),
                     )
-                  : const SizedBox(height: 25, child: Text("Sign In")),
+                  : SizedBox(height: 25, child: Text(S.of(context).auth_signIn)),
             );
           },
         ),
